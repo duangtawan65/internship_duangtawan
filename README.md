@@ -13,3 +13,33 @@ Please follow below instruction to complete the tests
 <p align="left">
   <img src="demo.gif" width="640"/>
 </p>
+
+
+สิ่งที่แก้ไขแล้ว:
+1. Fixed Code Errors
+    แก้ import cv2 
+    แก้ cap.read_frame() > cap.read()
+    แก้ model.prediction() > model.predict()
+    แก้ annotator.box_label() ให้อยู่ใน loop tab เข้าไป
+    แก้ yolov8a.pt > yolov8n.pt 
+
+2. Requirements.txt
+    สร้างไฟล์แล้ว มี ultralytics และ opencv-python
+
+3. Detect Only Cat
+    เพิ่ม if class_name == "cat": filter
+
+4. Add Name Top-Right Corner
+    มี code สำหรับใส่ชื่อแล้ว 
+
+5. Remove Video Writer
+    comment video writer code ออกแล้ว
+
+6. Blue Bounding Box
+    เปลี่ยนสีเป็นสีน้ำเงิน color=(255,0,0) (BGR format)
+
+7. Tracking Line
+    เพิ่ม tracking_points list
+    เพิ่ม code สำหรับวาดเส้น tracking
+
+8. แก้ waitingKey เป็น 1 
